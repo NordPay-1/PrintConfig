@@ -32,7 +32,7 @@
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "TouchWo Kiosk Printe 1"
+      "name": "TouchWo Kiosk Printer"
     },
     {
       "comment": "Standard 203 DPI thermal printer with chunking",
