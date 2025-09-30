@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "default_printer": {
+    "dpi": 203,
+    "paper_width_mm": 80,
+    "chunk_data": false,
+    "name": "Generic 80mm Thermal (203 DPI)"
+  },
+  "custom_printers": [
+    {
+      "comment": "No chunking for faster transmission",
+      "vendor_id": 19267,
+      "product_id": null,
+      "dpi": 150,
+      "paper_width_mm": 80,
+      "chunk_data": false,
+      "name": "80mm @ 150 DPI (No Chunk)"
+    },
+    {
+      "comment": "Sunmi Kitche Printer, NT 311",
+      "vendor_id": 12879,
+      "product_id": 210,
+      "dpi": 190,
+      "paper_width_mm": 80,
+      "chunk_data": false,
+      "name": "80mm @ 150 DPI (No Chunk)"
+    },
+    {
+      "comment": "TouchWo Kiosk Printer",
+      "vendor_id": 4070,
+      "product_id": null,
+      "dpi": 150,
+      "paper_width_mm": 80,
+      "chunk_data": false,
+      "name": "80mm @ 150 DPI (No Chunk)"
+    },
+    {
+      "comment": "Standard 203 DPI thermal printer with chunking",
+      "vendor_id": 10927,
+      "product_id": 24595,
+      "dpi": 203,
+      "paper_width_mm": 80,
+      "chunk_data": false,
+      "name": "80mm @ 203 DPI Hardware"
+    },
+    {
+      "comment": "Epson TM series (203 DPI hardware, chunked for reliability)",
+      "vendor_id": 1208,
+      "product_id": null,
+      "dpi": 203,
+      "paper_width_mm": 80,
+      "chunk_data": true,
+      "name": "Epson TM Series (203 DPI)"
+    }
+  ],
+  "notes": [
+    "IMPORTANT: dpi MUST match your printer's HARDWARE DPI!",
+    "Most thermal printers are 203 DPI (8 dots/mm)",
+    "Budget/older printers may be 100, 150, or 180 DPI",
+    "To test: Print 80mm, measure actual width, adjust dpi if wrong",
+    "chunk_data: true = split into 16KB chunks (reliable), false = send all at once (faster)",
+    "Disable chunking for printers that handle large transfers well",
+    "vendor_id and product_id use DECIMAL format (not hex)",
+    "Set product_id to null to match any product from that vendor",
+    "print_width_dots auto-calculated: (paper_width_mm / 25.4) * dpi",
+    "To find your printer's VID/PID: Check /status API endpoint"
+  ]
+}
