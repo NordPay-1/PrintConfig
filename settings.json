@@ -23,7 +23,7 @@
       "dpi": 190,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "Sunmi Kitche Printer, NT 311",
+      "name": "Sunmi Kitche Printer, NT 311"
     },
     {
       "comment": "TouchWo Kiosk Printer",
@@ -32,7 +32,7 @@
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "TouchWo Kiosk Printer",
+      "name": "TouchWo Kiosk Printer"
     },
     {
       "comment": "Standard 203 DPI thermal printer with chunking",
