@@ -14,7 +14,7 @@
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "80mm @ 150 DPI (No Chunk)"
+      "name": "HSPOS Printer 80mm"
     },
     {
       "comment": "Sunmi Kitche Printer, NT 311",
@@ -32,7 +32,7 @@
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "80mm @ 150 DPI (No Chunk)"
+      "name": "TouchWo Kiosk Printer",
     },
     {
       "comment": "Standard 203 DPI thermal printer with chunking",
