@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "default_printer": {
     "dpi": 203,
     "paper_width_mm": 80,
@@ -8,7 +8,7 @@
   },
   "custom_printers": [
     {
-      "comment": "No chunking for faster transmission",
+      "comment": "HSPOS - No chunking, standard auto-detection works",
       "vendor_id": 19267,
       "product_id": null,
       "dpi": 150,
@@ -17,16 +17,16 @@
       "name": "HSPOS 80mm"
     },
     {
-      "comment": "Sunmi Kitchen Printer, NT 311",
+      "comment": "Sunmi Kitchen Printer, NT 311 - Auto-detection works",
       "vendor_id": 12879,
       "product_id": 210,
       "dpi": 190,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "Sunmi Kitche Printer, NT 311"
+      "name": "Sunmi Kitchen Printer, NT 311"
     },
     {
-      "comment": "TouchWo Kiosk Printer ",
+      "comment": "TouchWo Kiosk Printer",
       "vendor_id": 4070,
       "product_id": null,
       "dpi": 150,
@@ -35,13 +35,20 @@
       "name": "TouchWo Kiosk Printer"
     },
     {
-      "comment": "Standard 203 DPI thermal printer with chunking",
+      "comment": "HPRT TP-900i - Custom cash drawer mapping (bit2 inverted, requires bit4=1)",
       "vendor_id": 10927,
       "product_id": 24595,
       "dpi": 203,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "80mm @ 203 DPI Hardware"
+      "name": "HPRT TP-900i",
+      "cash_drawer_status": {
+        "drawer_bit": 2,
+        "inverted": true,
+        "required_bits": {
+          "bit4": true
+        }
+      }
     },
     {
       "comment": "Epson TM series (203 DPI hardware, chunked for reliability)",
@@ -63,6 +70,17 @@
     "vendor_id and product_id use DECIMAL format (not hex)",
     "Set product_id to null to match any product from that vendor",
     "print_width_dots auto-calculated: (paper_width_mm / 25.4) * dpi",
-    "To find your printer's VID/PID: Check /status API endpoint"
+    "To find your printer's VID/PID: Check /status API endpoint",
+    "",
+    "CASH DRAWER STATUS MAPPING (optional, only for non-standard printers):",
+    "- drawer_bit: Which bit changes when drawer opens/closes (0-7)",
+    "- inverted: true = bit 0 means OPEN, bit 1 means CLOSED",
+    "- required_bits: Optional pattern matching (e.g., bit4 must be 1)",
+    "",
+    "HPRT TP-900i pattern: CLOSED=0x14, OPEN=0x10",
+    "  Binary: CLOSED=00010100, OPEN=00010000",
+    "  Analysis: bit2 changes (1→0), bit4 always 1",
+    "  Mapping: drawer_bit=2, inverted=true, required_bits={bit4:true}"
   ]
 }
+
