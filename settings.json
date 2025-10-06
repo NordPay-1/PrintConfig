@@ -8,20 +8,21 @@
   },
   "custom_printers": [
     {
-      "comment": "HSPOS - No chunking, standard auto-detection works",
-      "vendor_id": 19267,
-      "product_id": null,
-      "dpi": 150,
-      "paper_width_mm": 80,
-      "chunk_data": false,
-      "name": "HSPOS 80mm",
-      "cash_drawer_status": {
-			"status_command_hex": "10 04 01",
-			"drawer_bit": 2,
-			"inverted": true,
-			"required_bits": {
-				"bit4": true
-			}
+  "comment": "HSPOS - All models use same cash drawer mapping",
+  "vendor_id": 19267,
+  "product_id": null,  // ← Applies to ALL HSPOS products
+  "dpi": 150,
+  "paper_width_mm": 80,
+  "chunk_data": false,
+  "name": "HSPOS 80mm",
+  "cash_drawer_status": {  // ← Add this
+    "status_command_hex": "10 04 01",
+    "drawer_bit": 2,
+    "inverted": true,
+    "required_bits": {
+      "bit4": true
+    }
+  }
     },
     {
       "comment": "Sunmi Kitchen Printer, NT 311 - Auto-detection works",
