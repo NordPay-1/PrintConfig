@@ -8,13 +8,22 @@
   },
   "custom_printers": [
     {
-      "comment": "HSPOS - No chunking, standard auto-detection works",
+      "comment": "HSPOS - Forces pin 3 command (pin 5 doesn't work for drawer status)",
       "vendor_id": 19267,
-      "product_id": null,
+      "product_id": 14384,
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "HSPOS 80mm"
+      "name": "HSPOS 80mm",
+      "cash_drawer_status": {
+        "drawer_bit": 2,
+        "inverted": true,
+        "required_bits": {
+          "bit1": true,
+          "bit4": true
+        },
+        "force_command": [16, 4, 1]
+      }
     },
     {
       "comment": "Sunmi Kitchen Printer, NT 311 - Auto-detection works",
@@ -83,4 +92,6 @@
     "  Mapping: drawer_bit=2, inverted=true, required_bits={bit4:true}"
   ]
 }
+
+
 
