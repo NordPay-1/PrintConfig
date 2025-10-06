@@ -25,13 +25,21 @@
   }
     },
     {
-      "comment": "Sunmi Kitchen Printer, NT 311 - Auto-detection works",
+      "comment": "Sunmi Kitchen Printer",
       "vendor_id": 12879,
-      "product_id": 210,
+      "product_id": null,
       "dpi": 190,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "Sunmi Kitchen Printer, NT 311"
+      "name": "Sunmi Kitchen Printer",
+      		"cash_drawer_status": {
+			"status_command_hex": "10 04 01",
+			"drawer_bit": 2,
+			"inverted": true,
+			"required_bits": {
+				"bit4": true
+			}
+          }
     },
     {
       "comment": "TouchWo Kiosk Printer",
@@ -45,18 +53,19 @@
     {
       "comment": "HPRT TP-900i - Custom cash drawer mapping (bit2 inverted, requires bit4=1)",
       "vendor_id": 10927,
-      "product_id": 24595,
+      "product_id": null,
       "dpi": 203,
       "paper_width_mm": 80,
       "chunk_data": false,
       "name": "HPRT TP-900i",
-      "cash_drawer_status": {
-        "drawer_bit": 2,
-        "inverted": true,
-        "required_bits": {
-          "bit4": true
-        }
-      }
+		"cash_drawer_status": {
+			"status_command_hex": "1D 61 01",
+			"drawer_bit": 2,
+			"inverted": true,
+			"required_bits": {
+				"bit4": true
+			}
+		}
     },
     {
       "comment": "Epson TM series (203 DPI hardware, chunked for reliability)",
