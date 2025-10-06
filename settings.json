@@ -14,7 +14,14 @@
       "dpi": 150,
       "paper_width_mm": 80,
       "chunk_data": false,
-      "name": "HSPOS 80mm"
+      "name": "HSPOS 80mm",
+      "cash_drawer_status": {
+			"status_command_hex": "10 04 01",
+			"drawer_bit": 2,
+			"inverted": true,
+			"required_bits": {
+				"bit4": true
+			}
     },
     {
       "comment": "Sunmi Kitchen Printer, NT 311 - Auto-detection works",
