@@ -10,12 +10,12 @@
     {
   "comment": "HSPOS - All models use same cash drawer mapping",
   "vendor_id": 19267,
-  "product_id": null,  // ← Applies to ALL HSPOS products
+  "product_id": null,
   "dpi": 150,
   "paper_width_mm": 80,
   "chunk_data": false,
   "name": "HSPOS 80mm",
-  "cash_drawer_status": {  // ← Add this
+  "cash_drawer_status": {
     "status_command_hex": "10 04 01",
     "drawer_bit": 2,
     "inverted": true,
