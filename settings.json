@@ -59,7 +59,7 @@
       "chunk_data": false,
       "name": "HPRT TP-900i",
 		"cash_drawer_status": {
-			"status_command_hex": "10 04 01",
+			"status_command_hex": "10 04 04",
 			"drawer_bit": 2,
 			"inverted": true,
 			"required_bits": {
