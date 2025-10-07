@@ -58,16 +58,14 @@
       "paper_width_mm": 80,
       "chunk_data": false,
       "name": "HPRT TP-900i",
-	"cash_drawer_status": {
-	    "drawer_bit": 2,  
-					"status_command_hex": "10 04 01",
-
-	    "inverted": true,
-	    "required_bits": {
-	        "bit4": true
-	    },
-
-	}
+      "cash_drawer_status": {
+        "status_command_hex": "10 04 01",
+        "drawer_bit": 2,
+        "inverted": true,
+        "required_bits": {
+          "bit4": true
+        }
+      }
     },
     {
       "comment": "Epson TM series (203 DPI hardware, chunked for reliability)",
