@@ -65,7 +65,13 @@
 			"required_bits": {
 				"bit4": true
 			}
-		}
+		},
+		"status_stream": {
+          "enabled": true,
+          "frame_bytes": 4,
+          "status_byte_index": 0,
+          "prefer_last_frame": true
+        }
     },
     {
       "comment": "Epson TM series (203 DPI hardware, chunked for reliability)",
