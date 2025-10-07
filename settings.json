@@ -60,16 +60,13 @@
       "name": "HPRT TP-900i",
 	"cash_drawer_status": {
 	    "drawer_bit": 2,  
+					"status_command_hex": "10 04 01",
+
 	    "inverted": true,
 	    "required_bits": {
 	        "bit4": true
 	    },
-	    "status_stream": { 
-	        "enabled": true,
-	        "frame_bytes": 4,
-	        "status_byte_index": 0,
-	        "prefer_last_frame": true
-	    }
+
 	}
     },
     {
